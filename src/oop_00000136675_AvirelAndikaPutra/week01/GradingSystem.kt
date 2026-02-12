@@ -12,6 +12,10 @@ fun main(){
     }
 
     println("Grade kamu: $grade")
+    val studentId: String? = null
+    val idLength = studentId?.length ?: 0
+
+    println("Panjang Id: $idLength")
 }
 fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
 println("status: ${calculateStatus(score)}")
