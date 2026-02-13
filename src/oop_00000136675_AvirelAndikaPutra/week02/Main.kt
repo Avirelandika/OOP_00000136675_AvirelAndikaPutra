@@ -57,3 +57,40 @@ if (nim.length != 5) {
 constructor(name: String, nim: String) : this(name, nim, major= "Non-Matriculated") {
     println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
 }
+    println("\n--- TUGAS MANDIRI 2: MINI RPG ---")
+    print("Masukkan Nama Hero: ")
+    val heroName = scanner.nextLine()
+    print("Masukkan Stat Damage: ")
+    val heroDamage = scanner.nextInt()
+
+    val player = Hero(heroName, heroDamage)
+    var enemyHp = 100
+
+    println("Pertarungan dimulai! Musuh muncul (HP: $enemyHp)")
+
+    while (player.isAlive() && enemyHp > 0) {
+        println("\nMenu: 1. Serang, 2. Kabur")
+        val action = scanner.nextInt()
+
+        if (action == 1) {
+            player.attack("Musuh")
+            enemyHp -= player.baseDamage
+            println("HP Musuh tersisa: $enemyHp")
+
+            if (enemyHp > 0) {
+                val enemyDamage = (10..20).random()
+                player.takeDamage(enemyDamage)
+                println("Musuh menyerang balik! HP $heroName tersisa: ${player.hp}")
+            }
+        } else {
+            println("Kamu kabur dari pertarungan!")
+            break
+        }
+    }
+
+// Pengumuman pemenang
+    if (enemyHp <= 0) {
+        println("\nSelamat! $heroName menang!")
+    } else if (!player.isAlive()) {
+        println("\nKalah! $heroName telah gugur.")
+    }
