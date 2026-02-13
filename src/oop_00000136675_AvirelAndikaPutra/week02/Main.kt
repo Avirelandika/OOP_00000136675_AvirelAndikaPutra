@@ -43,7 +43,7 @@ if (nim.length != 5) {
 
     print("Masukkan Lama Pinjam (hari): ")
     var duration = scanner.nextInt()
-    scanner.nextLine() // Membersihkan buffer scanner
+    scanner.nextLine()
 
     if (duration < 0) {
         duration = 1
