@@ -6,7 +6,7 @@ class Student ( 1 Usage new*
     var gpa: Double = 0.0,
     var major: String
 )
-init {
+ init {
      if (nim.length != 5) {
 
      println("WARNING: Objek tercipta dengan NIM ($nim) yang tidak valid!")
