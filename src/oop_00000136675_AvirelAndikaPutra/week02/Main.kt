@@ -32,6 +32,27 @@ if (nim.length != 5) {
     } else {
         println("Pilihan ngawur, pendaftaran batal!")
     }
+
+    println("\n--- TUGAS MANDIRI 1: LIBRARY SYSTEM ---")
+
+    print("Masukkan Judul Buku: ")
+    val bookTitle = scanner.nextLine()
+
+    print("Masukkan Nama Peminjam: ")
+    val borrower = scanner.nextLine()
+
+    print("Masukkan Lama Pinjam (hari): ")
+    var duration = scanner.nextInt()
+    scanner.nextLine() // Membersihkan buffer scanner
+
+    if (duration < 0) {
+        duration = 1
+    }
+
+    val loanObj = Loan(bookTitle, borrower, duration)
+
+    println("Detail Peminjaman: ${loanObj.borrower} meminjam '${loanObj.bookTitle}' selama ${loanObj.loanDuration} hari.")
+    println("Total Denda: Rp ${loanObj.calculateFine()}")
 }
 constructor(name: String, nim: String) : this(name, nim, major= "Non-Matriculated") {
     println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
