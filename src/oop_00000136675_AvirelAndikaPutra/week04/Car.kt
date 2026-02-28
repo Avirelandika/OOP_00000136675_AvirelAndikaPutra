@@ -5,3 +5,4 @@ open class car(bramd: String, val numberofdoors: int) : vehicle(brand) {
         println("Bagasi mobil $brand dengan $numberofdoors pintu di buka")
     }
 }
+ //halo
