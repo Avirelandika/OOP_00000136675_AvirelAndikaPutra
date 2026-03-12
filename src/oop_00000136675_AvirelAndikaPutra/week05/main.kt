@@ -33,7 +33,7 @@ fun main() {
         if (payment is EWallet) {
             println("Terdeteksi EWallet, melakukan TopUp...")
             payment.topUp(50000.0)
-            payment.processPayment(75000.0) // Transaksi seharusnya berhasil sekarang
+            payment.processPayment(75000.0) // Transaksi seharusnya berhasil sekaran
         }
     }
 }
