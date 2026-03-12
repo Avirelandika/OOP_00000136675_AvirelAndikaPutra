@@ -25,3 +25,9 @@ fun main() {
         println("-------------------------")
     }
 }
+
+// Tes Overloading
+val helper = MathHelper()
+println("Luas Persegi: ${helper.hitungLuas(5)}")
+println("Luas Persegi Panjang: ${helper.hitungLuas(5, 10)}")
+println("Luas Lingkaran: ${helper.hitungLuas(7.0)}")
