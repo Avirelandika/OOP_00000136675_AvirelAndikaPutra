@@ -17,6 +17,7 @@ class SmartHomeHub {
     }
 
     // Task Checkpoint 18: Smart Casting
+
     fun activateSecurityMode() {
         for (device in devices) {
             if (device is Recordable) {
