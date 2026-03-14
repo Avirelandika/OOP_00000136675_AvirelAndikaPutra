@@ -3,7 +3,7 @@ package oop_00000136675_AvirelAndikaPutra.week05
 // File: Main.kt
 fun processCheckout(method: PaymentMethod, amount: Double) {
     println("-> Memulai checkout...")
-    method.pay(amount) // Dynamic polymorphism
+    method.pay(amount) // Dynamic polymorphis
 }
 
 fun main() {
