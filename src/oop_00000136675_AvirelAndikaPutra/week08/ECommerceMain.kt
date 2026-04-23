@@ -29,4 +29,4 @@ fun main() {
             println("Log Peringatan: Data korup ditemukan! -> ${e.message}")
         }
     }
-}
+}//
