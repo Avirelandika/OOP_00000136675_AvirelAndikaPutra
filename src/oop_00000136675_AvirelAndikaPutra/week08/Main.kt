@@ -19,6 +19,6 @@ fun main() {
 
     for (item in mixedData) {
         val text = item as? String
-        text?.let { println("Ditemukan teks: ${it.uppercase()}") }
+        text?.let { println("Ditemukan teks: ${it.uppercase()}") }//
     }
 }
