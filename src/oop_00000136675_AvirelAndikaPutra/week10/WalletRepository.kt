@@ -15,4 +15,4 @@ class WalletRepository<T> {
             if (it is Coin) it.name == name else false
         }
     }
-}
+} //
